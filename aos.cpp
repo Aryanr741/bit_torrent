@@ -1,14 +1,17 @@
 //#include<bits/stdc++.h>
 #include<dirent.h>
 #include<sys/stat.h>
+#include<stdlib.h>
+#include<stdio.h>
 #include<iostream>
+#include<fstream>
 #include<termios.h>
+#include<sys/fcntl.h>
 #include<unistd.h>
 #include<cmath>
 #include<vector>
 #include<stack>
 #include<string>
-#include<stdlib.h>
 #include<pwd.h>
 #include<fcntl.h>
 #include<grp.h>
@@ -18,10 +21,12 @@
 using namespace std;
 
 struct stat sb;
+struct termios ts;
 bool flag = 1;
 int start=0,end1;
-int total_entries,cursor_x;
+int total_entries,cursor_x,cursor_y;
 string curr_dir;
+vector<string> iv;
 
 vector<string> files;
 vector<bool> isdir;
@@ -157,40 +162,56 @@ void copyFile(string fileName, string dest) {
         }
 }
 
-void normal_mode(){
+void command_output(){
+  getdata(curr_dir.c_str());
+  printdata();
+  move_cursor(15,0);
+  cout<<curr_dir<<endl;
+  cout<<"Mode: Command, pres esc to switch to command mode."<<endl;
   cout<<"$ "<<endl;
   move_cursor(17,3);
-  string command="",input1="",input2="";
+}
+
+void normal_mode(){
+  string input="";
+  cout<<"$ "<<endl;
+  move_cursor(17,3);
+  cursor_x=17;
+  cursor_y=3;
+  string command,input1="",input2="";
   int space=0;
   while(true){
     char ch=getchar();
-    if(ch==' ' && command.size()==0) space=0;
-    if(ch!=' ' && space==0 && ch!='\n') command+=ch;
-    if(ch==' ' && command.size()>0 && space==0) space=1;
-    if(ch!=' ' && space==1 && ch!='\n') input1+=ch;
-    if(ch==' ' && input1.size()>0 && space==1) space=2;
-    if(ch!=' ' && space==2 && ch!='\n') input2+=ch;
-    if(ch==char(27)){
-      move_cursor(16,0);
-      cout<<"Mode: Normal, pres : to switch to command mode.";
-      break;
-    }
+    input += ch;
+    cursor_y++;
     if(ch=='\n'){
-      //cout<<command<<command.size()<<endl<<input1<<input1.size()<<endl<<input2<<endl<<input2.size();
+      int n=input.size();
+      input = input.substr(0,n-1);
+      n--;
+      for(int i=0; i<n; i++){
+        // if(input[i]==' ' && command.size()==0) space=1;
+        if(input[i]!=' ' && input[i]!=char(92)) input1+=input[i];
+        else if(i>0 && input[i]==' ' && input[i-1]==char(92)) input1+=input[i];
+        else if(input[i]==' ' && input1!=""){iv.push_back(input1); input1="";}
+      }
+      if(input1!="") iv.push_back(input1);
+      command = iv[0];
       if(command!=""){
         // copy file
         if(command=="rename"){
-          if(input1!="" || input2!=""){
-            const char* old_name = input1.c_str();
-            const char* new_name = input2.c_str();
+          if(iv.size()==3 && iv[1]!="" || iv[2]!=""){
+            const char* old_name = iv[1].c_str();
+            const char* new_name = iv[2].c_str();
             rename(old_name, new_name);
-            getdata(curr_dir.c_str());
-            printdata();
-            move_cursor(15,0);
-            cout<<curr_dir<<endl;
-            cout<<"Mode: Command, pres esc to switch to command mode."<<endl;
-            cout<<"$ "<<endl;
-            move_cursor(17,3);
+            command_output();
+          }
+        }
+        if(command=="create"){
+          if(iv.size()==3 && iv[1]!="" || iv[2]!=""){
+            char temp[1024];
+            const char* dest_path = realpath(iv[2].c_str(),temp);
+            if(dest_path !=NULL) open((string(dest_path)+"/"+iv[1]).c_str(),O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
+            command_output();
           }
         }
         if(command=="quit"){
@@ -201,6 +222,23 @@ void normal_mode(){
       }
       else cout<<"command not provided";
     }
+    if(ch==char(127)){
+      if(input.size()>1){
+        input = input.substr(0,input.size()-2);
+        cout<<"\b \b";
+        cout<<"\b \b";
+        cout<<"\b \b";
+      }
+      else{
+        move_cursor(17,1);
+        cout<<"$   "<<endl;
+        cursor_x=17;
+        cursor_y=3;
+        move_cursor(17,3);
+        input = "";
+      }
+      //move_cursor(cursor_x,cursor_y);
+    }
   }
   return;
 }
@@ -209,7 +247,6 @@ int main(){
   get_row_col();
   stack<string> back;
   stack<string> forward;
-  struct termios ts;
   tcgetattr(STDIN_FILENO,&ts);
   ts.c_lflag &= (~ICANON);
   tcsetattr(0,TCSANOW,&ts);
@@ -284,7 +321,7 @@ int main(){
     }
     else if(ch0=='\n'){
       //printdata(curr_dir.c_str());
-
+      while(!forward.empty()) forward.pop();
       if(isdir[cursor_x-1]){
         //move_cursor(total_entries+1);
         //cout<<"hello";
@@ -357,22 +394,6 @@ int main(){
         move_cursor(cursor_x,0);
       }
       else{
-        printdata();
-        move_cursor(cursor_x,0);
-      }
-    }
-    if(ch0=='A' && ch1=='['){
-      if(back.size()>0){
-        forward.push(curr_dir);
-        curr_dir = back.top();
-        back.pop();
-        printf("\033c");
-        total_entries = getdata(curr_dir.c_str());
-        cursor_x = printdata();
-        move_cursor(cursor_x,0);
-      }
-      else{
-        printf("\033c");
         printdata();
         move_cursor(cursor_x,0);
       }
