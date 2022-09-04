@@ -80,6 +80,7 @@ int printdata(){
 }
 
 int getdata(char const *path){
+  chdir(path);
   files.clear();
   isdir.clear();
   index1.clear();
@@ -169,7 +170,9 @@ void command_output(){
   cout<<curr_dir<<endl;
   cout<<"Mode: Command, pres esc to switch to command mode."<<endl;
   cout<<"$ "<<endl;
-  move_cursor(17,3);
+  cursor_x=17;
+  cursor_y=3;
+  move_cursor(cursor_x, cursor_y);
 }
 
 void normal_mode(){
@@ -180,6 +183,7 @@ void normal_mode(){
   cursor_y=3;
   string command,input1="",input2="";
   int space=0;
+  iv.clear();
   while(true){
     char ch=getchar();
     input += ch;
@@ -195,23 +199,196 @@ void normal_mode(){
         else if(input[i]==' ' && input1!=""){iv.push_back(input1); input1="";}
       }
       if(input1!="") iv.push_back(input1);
-      command = iv[0];
+      if(iv.size()>0) command = iv[0];
       if(command!=""){
         // copy file
         if(command=="rename"){
           if(iv.size()==3 && iv[1]!="" || iv[2]!=""){
-            const char* old_name = iv[1].c_str();
-            const char* new_name = iv[2].c_str();
-            rename(old_name, new_name);
+            // char temp1[1024];
+            // char temp2[1024];
+            // const char* old_name = realpath(iv[1].c_str(),NULL);
+            // int n = string(old_name).size();
+            // const char* new_name = ((string(old_name).substr(0,n-(iv[1].size())))+iv[2]).c_str();
+            int res=2;
+            res = rename(iv[1].c_str(), iv[2].c_str());
             command_output();
+            if(res==0){
+              move_cursor(18,1);
+              cout<<"renamed it successfully";
+            }
+            else if(res==-1){
+              move_cursor(18,1);
+              cout<<"invalid rename";
+            }
+            //cout<<endl<<string(old_name)<<endl<<iv[2]<<endl<<string(new_name);
+            move_cursor(cursor_x,cursor_y);
+          }
+          else{
+            command_output();
+            move_cursor(18,1);
+            cout<<"invalid no. of arguments";
+            move_cursor(cursor_x,cursor_y);
           }
         }
-        if(command=="create"){
+        if(command=="create_file"){
           if(iv.size()==3 && iv[1]!="" || iv[2]!=""){
             char temp[1024];
             const char* dest_path = realpath(iv[2].c_str(),temp);
-            if(dest_path !=NULL) open((string(dest_path)+"/"+iv[1]).c_str(),O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
+            int res;
+            if(dest_path !=NULL) res = open((string(dest_path)+"/"+iv[1]).c_str(),O_WRONLY | O_CREAT, 0777);
             command_output();
+            move_cursor(18,1);
+            if(res !=-1) cout<<"file created successfully";
+            else cout<<"invalid create";
+            move_cursor(cursor_x,cursor_y);
+          }
+          else{
+            command_output();
+            move_cursor(18,1);
+            cout<<"invalid no. of arguments";
+            move_cursor(cursor_x,cursor_y);
+          }
+        }
+        if(command=="create_dir"){
+          if(iv.size()==3 && iv[1]!="" || iv[2]!=""){
+            char temp[1024];
+            const char* dest_path = realpath(iv[2].c_str(),temp);
+            int res;
+            if(dest_path !=NULL) res = mkdir((string(dest_path)+"/"+iv[1]).c_str(),0777);
+            command_output();
+            move_cursor(18,1);
+            if(res !=-1) cout<<"directory created successfully";
+            else cout<<"invalid create";
+            move_cursor(cursor_x,cursor_y);
+          }
+          else{
+            command_output();
+            move_cursor(18,1);
+            cout<<"invalid no. of arguments";
+            move_cursor(cursor_x,cursor_y);
+          }
+        }
+        if(command=="move"){
+          int n=iv.size();
+          if(n>=3){
+            char* dest_path = realpath(iv[n-1].c_str(),NULL);
+            for(int i=1; i<n-1; i++){
+              // cout<<string(dest_path)<<endl;
+              // cout<<iv[i]<<endl;
+              char* src_filepath = realpath(iv[i].c_str(),NULL);
+              //cout<<string(src_filepath)<<endl;
+              int b = string(src_filepath).size();
+              int a=b-1;
+              while(string(src_filepath)[a]!='/' && a>=0) a--;
+              //const char* dest_filepath = realpath((string(dest_path)+(string(src_filepath).substr(a,b-a-1))).c_str(),NULL);
+              string dest_filepath = string(dest_path) +"/"+ (string(src_filepath).substr(a+1,b-a-1));
+              rename(src_filepath, dest_filepath.c_str());
+              //cout<<string(dest_path)<<endl<<(string(src_filepath).substr(a+1,b-a-1))<<endl<<dest_filepath;
+            }
+            command_output();
+          }
+          else{
+            command_output();
+            move_cursor(18,1);
+            cout<<"invalid no. of arguments";
+            move_cursor(cursor_x,cursor_y);
+          }
+        }
+        if(command=="goto"){
+          if(iv.size()==2){
+            char* dest_path = realpath(iv[1].c_str(), NULL);
+            if(dest_path==NULL){
+              command_output();
+              move_cursor(18,1);
+              cout<<"path not found";
+              move_cursor(cursor_x,cursor_y);
+            } 
+            else{
+              curr_dir = string(dest_path);
+              command_output();
+            }
+          }
+          else{
+            command_output();
+            move_cursor(18,1);
+            cout<<"invalid no. of arguments";
+            move_cursor(cursor_x,cursor_y);
+          }
+        }
+        if(command=="search"){
+          if(iv.size()==2){
+            char* dest_path = realpath(iv[1].c_str(), NULL);
+            if(dest_path==NULL){
+              command_output();
+              move_cursor(18,1);
+              cout<<"False";
+              move_cursor(cursor_x,cursor_y);
+            }
+            else{
+              command_output();
+              move_cursor(18,1);
+              cout<<"True";
+              move_cursor(cursor_x,cursor_y);
+            }
+          }
+          else{
+            command_output();
+            move_cursor(18,1);
+            cout<<"invalid no. of arguments";
+            move_cursor(cursor_x,cursor_y);
+          }
+        }
+        if(command=="copy"){
+          int n=iv.size();
+          char* dest_path = realpath(iv[n-1].c_str(), NULL);
+          for(int i=1; i<n-1; i++){
+            char* src_path = realpath(iv[i].c_str(), NULL);
+            if(dest_path==NULL || src_path==NULL){
+              command_output();
+              move_cursor(18,1);
+              cout<<"invalid path";
+              move_cursor(cursor_x,cursor_y);
+            }
+            else{
+              stat(src_path, &sb);
+              if(!S_ISDIR(sb.st_mode)){
+                int b = string(src_path).size();
+                int a=b-1;
+                while(string(src_path)[a]!='/' && a>=0) a--;
+                string dest_filepath = string(dest_path) +"/"+ (string(src_path).substr(a+1,b-a-1));
+                char buf;
+                int f1=open(src_path,O_RDONLY);
+                int f2=open(dest_filepath.c_str(),O_WRONLY | O_CREAT, 0777);
+                if(f1!=-1){
+                  while(read(f1, &buf, 1)){
+                    write(f2, &buf, 1);
+                  }
+                }
+                close(f1);
+                close(f2); 
+              }  
+              command_output();
+              move_cursor(18,1);
+              cout<<"copied successfully";
+              move_cursor(cursor_x,cursor_y);           
+            }
+          }
+        }
+        if(command=="delete_file"){
+          if(iv.size()==2){
+            //char* dest_path = realpath(iv[2].c_str(), NULL);
+            if(remove(iv[1].c_str())==0){
+              command_output();
+              move_cursor(18,1);
+              cout<<"file deleted successfully";
+              move_cursor(cursor_x,cursor_y);             
+            }
+            else{
+              command_output();
+              move_cursor(18,1);
+              cout<<"invalid delete";
+              move_cursor(cursor_x,cursor_y);
+            }
           }
         }
         if(command=="quit"){
@@ -220,9 +397,24 @@ void normal_mode(){
           break;
         }
       }
-      else cout<<"command not provided";
+      else{
+         cout<<"invalid no. of arguments";
+         cursor_x=17;
+         cursor_y=3;
+         move_cursor(cursor_x,cursor_y);
+      }
+      move_cursor(15,0);
+      cout<<curr_dir<<endl;
+      cout<<"Mode: Command, pres esc to switch to command mode."<<endl;
+      cout<<"$ "<<endl;
+      cursor_x=17;
+      cursor_y=3;
+      move_cursor(cursor_x, cursor_y);
+      input="";
+      iv.clear();
+      input1="";
     }
-    if(ch==char(127)){
+    if(ch==char(127)){ //backspace
       if(input.size()>1){
         input = input.substr(0,input.size()-2);
         cout<<"\b \b";
@@ -238,6 +430,14 @@ void normal_mode(){
         input = "";
       }
       //move_cursor(cursor_x,cursor_y);
+    }
+    if(ch==char(27)){ //escape
+      printf("\033c");
+      printdata();
+      cursor_x=1;
+      cursor_y=1;
+      move_cursor(cursor_x, cursor_y);
+      return;
     }
   }
   return;
