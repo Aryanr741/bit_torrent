@@ -1,0 +1,682 @@
+
+new client connected to me...
+login a a 127.0.0.1 8081
+You have reached the max sessions limit
+login a a 127.0.0.1 8081
+You have reached the max sessions limit
+new client connected to me...
+login a a 127.0.0.1 8081
+Logged in successfully
+list_requests g1 127.0.0.1 8081
+
+new client connected to me...
+create_user a a 127.0.0.1 8081
+Userid already taken
+login a a 127.0.0.1 8081
+Logged in successfully
+list_requests g1 127.0.0.1 8081
+
+No data available to populate
+No data available to populate
+new client connected to me...
+create_user a a 127.0.0.1 8081
+user created successfully
+login a a 127.0.0.1 8081
+Logged in successfully
+create_group g1 127.0.0.1 8081
+Group created successfully
+upload_file /Users/aryangupta/Downloads/even.docx g1 even.docx 446725 aaaaaaa 127.0.0.1 8081
+File uploaded successfully
+new client connected to me...
+login a a 127.0.0.1 8081
+Logged in successfully
+create_group g1 127.0.0.1 8081
+Group already exists
+join_group g1 127.0.0.1 8081
+You have already joined this group
+new client connected to me...
+create_user b b 127.0.0.1 8082
+user created successfully
+join_group g1 127.0.0.1 8082
+You need to login first to create a group
+login b b 127.0.0.1 8082
+Logged in successfully
+join_group g1 127.0.0.1 8082
+Your request has been initiated
+list_requests 127.0.0.1 8081
+Invalid no. of arguments
+list_requests g1 127.0.0.1 8081
+, b
+new client connected to me...
+login a a 127.0.0.1 8081
+You have reached the max sessions limit
+new client connected to me...
+login a a 127.0.0.1 8081
+Logged in successfully
+list_requests g1 127.0.0.1 8081
+b
+No data available to populate
+No data available to populate
+No data available to populate
+new client connected to me...
+create_user a a 127.0.0.1 8081
+user created successfully
+login a a 127.0.0.1 8081
+Logged in successfully
+create_group g1 127.0.0.1 8081
+Group created successfully
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+File uploaded successfully
+new client connected to me...
+login a a 127.0.0.1 8081
+You are already logged in
+list_requests 127.0.0.1 8081
+Invalid no. of arguments
+list_requests g1 127.0.0.1 8081
+
+new client connected to me...
+login a a 127.0.0.1 8081
+You are already logged in
+create_group g1 127.0.0.1 8081
+Group already exists
+list_groups 127.0.0.1 8081
+g1
+list_files 127.0.0.1 8081
+Invalid no. of arguments
+list_files g1 127.0.0.1 8081
+a.py
+
+No data available to populate
+No data available to populate
+No data available to populate
+new client connected to me...
+create_user a a 127.0.0.1 8081
+user created successfully
+login a a 127.0.0.1 8081
+Logged in successfully
+create_group g1 127.0.0.1 8081
+Group created successfully
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+create_user b b 127.0.0.1 8082
+user created successfully
+No data available to populate
+No data available to populate
+No data available to populate
+new client connected to me...
+create_user a a 127.0.0.1 8081
+user created successfully
+login a a 127.0.0.1 8081
+Logged in successfully
+create_group g1 127.0.0.1 8081
+Group created successfully
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+create_user a 127.0.0.1 8081
+Invalid no. of arguments
+create_user a a 127.0.0.1 8081
+Userid already taken
+No data available to populate
+No data available to populate
+No data available to populate
+new client connected to me...
+create_user a a 127.0.0.1 8081
+user created successfully
+login a a 127.0.0.1 8081
+Logged in successfully
+create_group g1 127.0.0.1 8081
+Group created successfully
+list_users 127.0.0.1 8081
+Group created successfully
+list_users 127.0.0.1 8081
+Group created successfully
+list_groups 127.0.0.1 8081
+g1
+new client connected to me...
+new client connected to me...
+create_user b b 127.0.0.1 8082
+user created successfully
+login b b 127.0.0.1 8082
+Logged in successfully
+create_user c c 127.0.0.1 8083
+user created successfully
+login c c 127.0.0.1 8083
+Logged in successfully
+join_group g1 127.0.0.1 8082
+Your request has been initiated
+list_requests g1 127.0.0.1 8081
+b
+join_group g1 127.0.0.1 8083
+Your request has been initiated
+list_requests g1 127.0.0.1 8081
+b, c
+accept_request g1 b 127.0.0.1 8081
+Request accepted successfully
+accept_request g1 c 127.0.0.1 8081
+Request accepted successfully
+list_requests g1 127.0.0.1 8081
+No pending requests currently
+join_group g1 127.0.0.1 8082
+You have already joined this group
+join_group g1 127.0.0.1 8083
+You have already joined this group
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+download_file g1 a.py . 127.0.0.1 8082
+Invalid no. of arguments
+download_file g1 a.py ./ 127.0.0.1 8082
+Invalid no. of arguments
+new client connected to me...
+login a a 127.0.0.1 8081
+You are already logged in
+list_requests g1 127.0.0.1 8081
+
+new client connected to me...
+create_group g1 127.0.0.1 8081
+Group already exists
+new client connected to me...
+join_group g1 127.0.0.1 8082
+You have already joined this group
+list_files 127.0.0.1 8081
+Invalid no. of arguments
+list_files g1 127.0.0.1 8081
+a.py
+
+download_file g1 a.py ./ 127.0.0.1 8082
+found 102400 738 sha-256 aaaaaaa 127.0.0.1_8081 
+new client connected to me...
+join_group g1 127.0.0.1 8081
+You have already joined this group
+new client connected to me...
+join_group g1 127.0.0.1 8082
+You have already joined this group
+list_files g1 127.0.0.1 8081
+a.py
+
+download_file g1 a.py ./ 127.0.0.1 8082
+found 102400 738 sha-256 aaaaaaa 127.0.0.1_8081 
+new client connected to me...
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8082
+found 102400 738 sha-256 aaaaaaa 127.0.0.1_8081 
+new client connected to me...
+login b b 127.0.0.1 8083
+One user is already logged in to current session. Logout to login again.
+new client connected to me...
+login b b 127.0.0.1 8085
+Logged in successfully
+join_group g1 127.0.0.1 8085
+You have already joined this group
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 sha-256 aaaaaaa 127.0.0.1_8081 
+new client connected to me...
+new client connected to me...
+new client connected to me...
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 sha-256 aaaaaaa 127.0.0.1_8081 
+new client connected to me...
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 sha-256 aaaaaaa 127.0.0.1_8081 
+new client connected to me...
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 sha-256 aaaaaaa 127.0.0.1_8081 
+join_group g1 127.0.0.1 8081
+You have already joined this group
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 sha-256 aaaaaaa 127.0.0.1_8081 
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 sha-256 aaaaaaa 127.0.0.1_8081 
+No data available to populate
+No data available to populate
+No data available to populate
+new client connected to me...
+create_user a a 127.0.0.1 8081
+user created successfully
+login a a 127.0.0.1 8081
+Logged in successfully
+create_group g1 127.0.0.1 8081
+Group created successfully
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+create_user b b 127.0.0.1 8085
+user created successfully
+login b b 127.0.0.1 8085
+Logged in successfully
+join_group g1 127.0.0.1 8085
+Your request has been initiated
+list_requests g1 127.0.0.1 8081
+b
+accept_request g1 b 127.0.0.1 8081
+Request accepted successfully
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 127.0.0.1_8081 
+new client connected to me...
+new client connected to me...
+create_user c c 127.0.0.1 8083
+user created successfully
+login c c 127.0.0.1 8083
+Logged in successfully
+join_group g1 127.0.0.1 8083
+Your request has been initiated
+list_requests g1 127.0.0.1 8081
+, c
+accept_request g1 c 127.0.0.1 8081
+Request accepted successfully
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8083
+Different file with the same name is already uploaded in this group
+new client connected to me...
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8083
+Different file with the same name is already uploaded in this group
+new client connected to me...
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 sha-256 aaaaaaa 127.0.0.1_8081 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8083
+Different file with the same name is already uploaded in this group
+new client connected to me...
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8083
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 127.0.0.1_8083 
+No data available to populate
+No data available to populate
+No data available to populate
+new client connected to me...
+new client connected to me...
+create_user a a 127.0.0.1 8081
+user created successfully
+login a a 127.0.0.1 8081
+Logged in successfully
+create_group g1 127.0.0.1 8081
+Group created successfully
+create_user b b 127.0.0.1 8083
+user created successfully
+login b b 127.0.0.1 8083
+Logged in successfully
+join_group g1 127.0.0.1 8083
+Your request has been initiated
+accept_request g1 b 127.0.0.1 8081
+Request accepted successfully
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8083
+success File uploaded successfully
+new client connected to me...
+create_user c c 127.0.0.1 8085
+user created successfully
+login c c 127.0.0.1 8085
+Logged in successfully
+download_file g1 a.py ./ 127.0.0.1 8085
+You are not part of this group
+new client connected to me...
+join_group g1  127.0.0.1 8085
+Your request has been initiated
+accept_request g1 c 127.0.0.1 8081
+Request accepted successfully
+list_requests 127.0.0.1 8081
+Invalid no. of arguments
+list_requests g1 127.0.0.1 8081
+
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 sha-256 aaaaaaa 127.0.0.1_8083 
+No data available to populate
+No data available to populate
+No data available to populate
+new client connected to me...
+new client connected to me...
+create_user a a 127.0.0.1 8081
+user created successfully
+login a a 127.0.0.1 8081
+Logged in successfully
+create_group g1 127.0.0.1 8081
+Group created successfully
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+create_user b b 127.0.0.1 8083
+user created successfully
+login b b 127.0.0.1 8083
+Logged in successfully
+join_group g1 127.0.0.1 8083
+Your request has been initiated
+accept_request g1 b 127.0.0.1 8081
+Request accepted successfully
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8083
+success File uploaded successfully
+new client connected to me...
+create_user c c 127.0.0.1 8085
+user created successfully
+login c c 127.0.0.1 8085
+Logged in successfully
+join_group g1 127.0.0.1 8085
+Your request has been initiated
+accept_request g1 c 127.0.0.1 8081
+Request accepted successfully
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 127.0.0.1_8081 127.0.0.1_8083 
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 sha-256 aaaaaaa 127.0.0.1_8081 127.0.0.1_8083 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8083
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 2 127.0.0.1_8081 127.0.0.1_8083  /Users/aryangupta/Downloads/a.py /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+new client connected to me...
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8083
+success File uploaded successfully
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 2 127.0.0.1_8081 127.0.0.1_8083  /Users/aryangupta/Downloads/a.py /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8083
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 2 127.0.0.1_8081 127.0.0.1_8083  /Users/aryangupta/Downloads/a.py /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+Invalid no. of arguments
+upload_file /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv g1 M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv g1 M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv 1397025833 aaaaaaa 127.0.0.1 8083
+success File uploaded successfully
+new client connected to me...
+download_file g1 /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv 127.0.0.1 8085
+Invalid no. of arguments
+download_file g1 /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv ./ 127.0.0.1 8085
+File of this name is does not exist in this group
+download_file g1 M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv ./ 127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 2 127.0.0.1_8081 127.0.0.1_8083  /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv 
+new client connected to me...
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv g1 M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+upload_file /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv g1 M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv 1397025833 aaaaaaa 127.0.0.1 8083
+success File uploaded successfully
+new client connected to me...
+list_files 127.0.0.1 8085
+Invalid no. of arguments
+list_files g1 127.0.0.1 8085
+M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv
+
+download_file g1 M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv ./ 127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 2 127.0.0.1_8081 127.0.0.1_8083  /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+list_files g1 127.0.0.1 8085
+a.py
+
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+list_files g1 127.0.0.1 8085
+a.py
+
+download_file g1 a.py ./   127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 738 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./   127.0.0.1 8085
+found 102400 738 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+upload_file /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv g1 M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv g1 M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv ./ 127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/M0h4bb4t31n.00.br.sdm0v13sp01nt.c0m.mkv 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/mohabbaten.mkv g1 mohabbaten.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 mohabbaten.mkv ./ 127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/mohabbaten.mkv g1 mohabbaten.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 mohabbaten.mkv ./  127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/mohabbaten.mkv g1 mohabbaten.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 mohabbaten.mkv ./  127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+new client connected to me...
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/mohabbaten.mkv g1 mohabbaten.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+download_file g1 mohabbaten.mkv ./  127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/mohabbaten.mkv g1 mohabbaten.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 mohabbaten.mkv 127.0.0.1 8085
+Invalid no. of arguments
+download_file g1 mohabbaten.mkv ./ 127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/mohabbaten.mkv g1 mohabbaten.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 mohabbaten.mkv ./ 127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/mohabbaten.mkv g1 mohabbaten.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 mohabbaten.mkv ./ 127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/mohabbaten.mkv g1 mohabbaten.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 mohabbaten.mkv ./ 127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/mohabbaten.mkv g1 mohabbaten.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 mohabbaten.mkv ./ 127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/Class5thHindi1sttermexam.pdf g1 Class5thHindi1sttermexam.pdf 335499 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 Class5thHindi1sttermexam.pdf ./ 127.0.0.1 8085
+found 102400 335499 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/Class5thHindi1sttermexam.pdf 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/even.docx g1 even.docx 446725 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 even.docx ./ 127.0.0.1 8085
+found 102400 446725 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/even.docx 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 55434 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 55434 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 55434 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 55434 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 55434 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/mohabbaten.mkv g1 mohabbaten.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 mohabbaten.mkv 127.0.0.1 8085
+Invalid no. of arguments
+download_file g1 mohabbaten.mkv ./ 127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+ 127.0.0.1 8081
+success File uplfound 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/Class5thHindi1sttermexam.pdf g1 Class5thHindi1sttermexam.pdf 335499 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+ 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 Class5thHindi1sttermexam.pdf ./ 127.0.0.1 8085
+found 102400 335499 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/Class5thHindi1sttermexam.pdf 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/Class5thHindi1sttermexam.pdf g1 Class5thHindi1sttermexam.pdf 335499 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 Class5thHindi1sttermexam.pdf ./ 127.0.0.1 8085
+found 102400 335499 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/Class5thHindi1sttermexam.pdf 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/image.jpeg g1 image.jpeg 61275 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 image.jpeg ./ 127.0.0.1 8085
+found 102400 61275 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/image.jpeg 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/image.jpeg g1 image.jpeg 61275 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 image.jpeg ./ 127.0.0.1 8085
+found 102400 61275 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/image.jpeg 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/project_list.pdf g1 project_list.pdf 31794 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 project_list.pdf ./ 127.0.0.1 8085
+found 102400 31794 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/project_list.pdf 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/a.py g1 a.py 55434 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 a.py ./ 127.0.0.1 8085
+found 102400 55434 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/a.py 
+new client connected to me...
+upload_file /Users/aryangupta/Downloads/mohabbaten.mkv g1 mohabbaten.mkv 1397025833 aaaaaaa 127.0.0.1 8081
+success File uploaded successfully
+new client connected to me...
+download_file g1 mohabbaten.mkv ./ 127.0.0.1 8085
+found 102400 1397025833 aaaaaaa sha-256 1 127.0.0.1_8081  /Users/aryangupta/Downloads/mohabbaten.mkv 

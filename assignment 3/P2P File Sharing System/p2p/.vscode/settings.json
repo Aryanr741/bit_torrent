@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "__tree": "cpp",
+        "map": "cpp",
+        "fstream": "cpp",
+        "create_user": "cpp",
+        "vector": "cpp",
+        "iosfwd": "cpp",
+        "string": "cpp",
+        "filesystem": "cpp",
+        "stdexcept": "cpp",
+        "new": "cpp"
+    }
+}
